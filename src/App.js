@@ -1,4 +1,9 @@
 
+import Search from "./Search"
+import Pagination from "./Pagination"
+import Posts from "./Posts"
+
+
 function App() {
 
   let url = "https://hn.algolia.com/api/v1/search?query=javascript"
@@ -12,8 +17,10 @@ function App() {
 
 
   return (
-    <div>
-      hello world
+    <div className="container">
+      <Search/>
+      <Pagination/>
+      <Posts/>
     </div>
   );
 }

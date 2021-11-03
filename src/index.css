@@ -1,3 +1,13 @@
+:root {
+  --bg-color:#1A2036;
+  --bg-color-2:#2E3650;
+  --fg-color:#9399b1;
+  --fg-color-2:rgb(177,185,216);
+  --blue:#2a49bb;
+  --red:#c52424;
+}
+
+
 *,
 ::before,
 ::after {
@@ -13,6 +23,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
+
+  background-color:var(--bg-color);
+  color:var(--fg-color-2);
 }
 
 code {
@@ -27,4 +40,137 @@ ul {
 a {
   color:inherit;
   text-decoration: none;
+}
+
+
+
+
+
+/*container*/
+.container {
+  padding:1.25rem;
+}
+
+
+
+
+
+/*search*/
+.search-container {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+
+.search-heading {
+  font-size:2rem;
+}
+
+.search-input {
+  border:none;
+  background:none;
+  color:var(--fg-color);
+  font-size:1.25rem;
+  padding:0.5rem;
+  margin: 1rem 0;
+  border-bottom: 3px solid var(--bg-color-2);
+}
+
+.search-input::placeholder {
+  color:var(--fg-color-1);
+}
+
+
+
+
+
+/*pagination*/
+.pagination {
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  margin:2rem 0;
+  font-size:1.5rem;
+}
+
+.pagination__page-info {
+  margin:0 1rem;
+}
+
+.pagination__prev,
+.pagination__next {
+  border:none;
+  background-color:var(--bg-color-2);
+  color:var(--fg-color-1);
+  font-size:1.5rem;
+  padding:0.5rem 1rem;
+  border-radius:3px;
+}
+
+.pagination__prev:hover,
+.pagination__next:hover {
+  cursor: pointer;
+  opacity:0.9;
+}
+
+.pagination__prev:active,
+.pagination__next:active {
+  opacity:1;
+}
+
+
+
+
+
+/*posts*/
+.posts {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+
+.post {
+  margin:4rem 0;
+}
+
+.post__info {
+  margin:0.5rem 0;
+}
+
+.post__button {
+  margin:0 0.5rem;
+}
+
+.post__button:first-of-type {
+  margin-left:0;
+}
+
+.post__button {
+  border:none;
+  padding:0.5rem;
+  border-radius: 3px;
+}
+
+.post__button-read-more {
+  background-color:var(--blue);
+  color:#ddd;
+}
+
+.post__button-remove {
+  background-color:var(--red);
+  color:#ddd;
+}
+
+.post__button-read-more:hover,
+.post__button-remove:hover {
+  cursor: pointer;
+  opacity:0.9;
+}
+
+.post__button-read-more:active,
+.post__button-remove:active {
+  opacity:1;
 }
